@@ -13,7 +13,7 @@ def predictions(x, model_selection):
     loaded_model = ''
         
     if model_selection == 'Simple NN':
-        loaded_model = tf.keras.models.load_model('Simple_NN', experimental_io_device='/job:localhost')
+        loaded_model = tf.keras.models.load_model('Simple_NN')
     elif model_selection == 'Deep NN':
         loaded_model = tf.keras.models.load_model('Deep_NN')
     elif model_selection == 'Decision Tree':
