@@ -2,4 +2,3 @@ numpy
 streamlit
 tensorflow
 sklearn
-sklearn.neighbors._base
