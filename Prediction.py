@@ -15,7 +15,7 @@ def predictions(x, model_selection):
     if model_selection == 'Simple NN':
         loaded_model = tf.keras.models.load_model('Simple_NN')
     elif model_selection == 'Deep NN':
-        loaded_model = tf.keras.models.load_model('Deep_NN')
+        loaded_model = tf.keras.models.load_model('Deep_NN/saved_model.pb')
     elif model_selection == 'Decision Tree':
         loaded_model = pickle.load(open('dt_clf.sav', 'rb'))
     elif model_selection == 'Random Forest':
