@@ -3,6 +3,7 @@ import pickle
 import streamlit as st
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import GradientBoostingClassifier
 from PIL import Image
 
 def predictions(x, model_selection):
