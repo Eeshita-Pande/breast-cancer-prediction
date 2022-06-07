@@ -1,17 +1,18 @@
+import pickle
+
 import numpy as np
-import pickle 
 import streamlit as st
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
-from PIL import Image
+
 
 def predictions(x, model_selection):
-    
+
     scaler = StandardScaler(with_mean=True, with_std=True)
     x_norm = scaler.fit_transform(x)
 
     loaded_model = ''
-        
+
     if model_selection == 'Simple NN':
         loaded_model = tf.keras.models.load_model('./Simple_NN')
     elif model_selection == 'Deep NN':
@@ -30,19 +31,19 @@ def predictions(x, model_selection):
         loaded_model = pickle.load(open('neigh.sav', 'rb'))
     else:
         print("Enter valid model name")
-    
+
 
     y = loaded_model.predict(x_norm)
     y = np.where(y > 0.5, 1, 0)
-    
+
     if y == 1:
         return("Likely to be breast cancer")
-    else: 
+    else:
         return("Unlikely to be breast cancer")
 
 
 def main():
-    st. set_page_config(layout="wide") 
+    st. set_page_config(layout="wide")
     st.title("BI-RADS based Breast Cancer Prediction")
     st.sidebar.header("Methodology")
     st.sidebar.markdown("<h4 style='text-align: justify;'>The Breast Imaging Reporting & Data System (BI-RADS) is a comprehensive assessment system developed by the American College of Radiology to classify breast images. I have used a public dataset from the UCI repository to train several models on predicting breast cancer when presented with inputs for BI-RADS categories (explained below).", unsafe_allow_html=True)
@@ -64,12 +65,12 @@ def main():
     Density = st.slider('Density',  min_value=1, max_value=4, step=1, value=2)
     st.image('density.png',width=790,use_column_width='never',output_format='PNG', caption='High density (input:1), equal density (input:2), low density (input:3), fat containing (input:4)')
     Model = st.selectbox("Predictive Model", ['Simple NN', 'Deep NN', 'Decision Tree', 'Random Forest', 'XG Boost', 'Support Vector Machines', 'Naive Bayes', 'KNN'])
-    
+
     diagnosis = ''
-    
+
     if st.button('Prediction'):
-        diagnosis = predictions([[Age, Shape, Margin, Density]], Model) 
-    
+        diagnosis = predictions([[Age, Shape, Margin, Density]], Model)
+
     st.success(diagnosis)
 
 
