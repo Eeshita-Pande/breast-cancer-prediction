@@ -21,8 +21,8 @@ def predictions(x, model_selection):
         loaded_model = pickle.load(open('dt_clf.sav', 'rb'))
     elif model_selection == 'Random Forest':
         loaded_model = pickle.load(open('rnd_clf.sav', 'rb'))
-    elif model_selection == 'XG Boost':
-        loaded_model = pickle.load(open('XGB_clf.sav', 'rb'))
+    #elif model_selection == 'XG Boost':
+    #   loaded_model = pickle.load(open('XGB_clf.sav', 'rb'))
     elif model_selection == 'Support Vector Machines':
         loaded_model = pickle.load(open('SVM_clf.sav', 'rb'))
     elif model_selection == 'Naive Bayes':
@@ -64,7 +64,7 @@ def main():
     st.image('margin.png',width=1000,use_column_width='never',output_format='PNG', caption='Circumscribed (input:1), microlobulated (input:2) , obscured (input:3), indistinct (input:4), spiculated (input:5).')
     Density = st.slider('Density',  min_value=1, max_value=4, step=1, value=2)
     st.image('density.png',width=790,use_column_width='never',output_format='PNG', caption='High density (input:1), equal density (input:2), low density (input:3), fat containing (input:4)')
-    Model = st.selectbox("Predictive Model", ['Simple NN', 'Deep NN', 'Decision Tree', 'Random Forest', 'XG Boost', 'Support Vector Machines', 'Naive Bayes', 'KNN'])
+    Model = st.selectbox("Predictive Model", ['Simple NN', 'Deep NN', 'Decision Tree', 'Random Forest','Support Vector Machines', 'Naive Bayes', 'KNN'])
 
     diagnosis = ''
 
