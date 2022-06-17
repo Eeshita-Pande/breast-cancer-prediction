@@ -12,6 +12,6 @@ I used the following languages and frameworks:
 <img alt="Keras" src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white"/>
 <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" />
 
-You can try it out [**HERE**]("https://share.streamlit.io/eeshita-pande/breast-cancer-prediction/main/Prediction.py")
+You can try it out [**HERE**](https://share.streamlit.io/eeshita-pande/breast-cancer-prediction/main/Prediction.py)
 
 
