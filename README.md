@@ -6,7 +6,7 @@ First, I explored the dataset in Google Colab, and then trained multiple models 
 
 Next, I used Streamlit to create an interactive web-app which you can try out [**HERE**](https://share.streamlit.io/eeshita-pande/breast-cancer-prediction/main/Prediction.py)
 
-![Alt Text](https://media.giphy.com/media/qz7MPMRx1yUMuEDZJp/giphy.gif)
+![Demo](https://media.giphy.com/media/alA39i4yKJKYtHrZia/giphy.gif)
 
 
 I used the following languages and frameworks:
