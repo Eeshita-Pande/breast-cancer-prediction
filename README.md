@@ -1,6 +1,10 @@
 # Breast Cancer Prediction
 
-This is my first end to end data science project. I have trained several models to predict the likelihood of breast cancer when presented with industry specific inputs.
+This was my first end to end data science project. I have trained several models to predict the likelihood of breast cancer when presented with industry specific inputs.
+
+First, I explored the dataset in Google Colab, and then trained multiple models using the publicly available [**UCI Mammographic Mass Dataset**](http://archive.ics.uci.edu/ml/datasets/mammographic+mass)
+
+Next, I used Streamlit to create an interactive web-app which you can try out [**HERE**](https://share.streamlit.io/eeshita-pande/breast-cancer-prediction/main/Prediction.py)
 
 I used the following languages and frameworks:
 
@@ -12,6 +16,5 @@ I used the following languages and frameworks:
 <img alt="Keras" src="https://img.shields.io/badge/Keras-%23D00000.svg?style=for-the-badge&logo=Keras&logoColor=white"/>
 <img alt="TensorFlow" src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" />
 
-You can try it out [**HERE**](https://share.streamlit.io/eeshita-pande/breast-cancer-prediction/main/Prediction.py)
 
 
